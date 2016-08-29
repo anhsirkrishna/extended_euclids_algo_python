@@ -6,7 +6,7 @@ def GCD(a,b):
 	
 	return GCD(b,a%b)
 	
-def eu_inverse(b,m):
+def ext_eu_inverse(b,m):
 	A = [1,0,m]
 	B = [0,1,b]
 	T = [0,0,0]
