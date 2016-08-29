@@ -24,7 +24,7 @@ def eu_inverse(b,m):
 			break
 			
 		Q = int(A[2]/B[2])
-		print("Q = ",Q)
+		#print("Q = ",Q)
 		
 		for i in range(3):
 			T[i] = A[i] - (Q * B[i])
@@ -43,4 +43,4 @@ if __name__ == "__main__":
 	b = int(args.b)
 	m = int(args.m)
 	
-	eu_inverse(b,m)
+	print("Inverse of "+b+"with respect to"+m+" is "+eu_inverse(b,m))
