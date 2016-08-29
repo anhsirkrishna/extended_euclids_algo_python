@@ -43,4 +43,4 @@ if __name__ == "__main__":
 	b = int(args.b)
 	m = int(args.m)
 	
-	print("Inverse of "+b+"with respect to"+m+" is "+eu_inverse(b,m))
+	print("Inverse of ",b," with respect to ",m," is ",eu_inverse(b,m))
