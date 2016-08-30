@@ -7,6 +7,9 @@ def GCD(a,b):
 	return GCD(b,a%b)
 	
 def ext_eu_inverse(b,m):
+	if(b<0):
+		b = b % m
+	
 	A = [1,0,m]
 	B = [0,1,b]
 	T = [0,0,0]
@@ -34,7 +37,7 @@ def ext_eu_inverse(b,m):
 		#print("T = ",T)
 		#print("________________________")
 
-if __name__ == "__main__":
+def main():
 	parser =  argparse.ArgumentParser()
 	parser.add_argument("b", help="Enter b, the number to find the inverse of")
 	parser.add_argument("m", help="Enter m, the number relative to the inverse")
@@ -43,4 +46,8 @@ if __name__ == "__main__":
 	b = int(args.b)
 	m = int(args.m)
 	
-	print("Inverse of ",b," with respect to ",m," is ",eu_inverse(b,m))
+	print("Inverse of ",b," with respect to ",m," is ",ext_eu_inverse(b,m))
+
+if(__name__=="__main__"):
+	main()
+	
